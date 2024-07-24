@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarLife</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: white;
+        }
+        
+        .nav-link {
+            text-align: center;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        section .container {
+            padding: 20px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .card {
+            margin: 20px 0;
+            height: 550px;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="navbar navbar-expand-lg">
+                <h1>CarLife</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#carros">Carros</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#header">
+        <section id="home">
+            <div class="container">
+                <h2>Os carros mais rápidos estão aqui!</h2>
+                <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div data-bs-interval="5000" class="carousel-item active">
+                            <img class="d-block w-100" src="images/mclaren_senna.jpg" alt="McLaren Senna">
+                        </div>
+                        <div data-bs-interval="5000" class="carousel-item">
+                            <img class="d-block w-100" src="images/lamborghini_sesto_elemento.jpg" alt="Lamborghini Sesto Elemento">
+                        </div>
+                        <div data-bs-interval="5000" class="carousel-item">
+                            <img class="d-block w-100" src="images/Porsche_918_Spyder.jpg" alt="Porsche 918 Spyder">
+                        </div>
+                    </div>
+                    <div>
+                        <button data-bs-target="#carousel" data-bs-slide="prev" type="button" class="carousel-control-prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button data-bs-target="#carousel" data-bs-slide="next" type="button" class="carousel-control-next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="carros">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <h2>Carros</h2>
+                    </div>
+                    <div class="col-3 text-end">
+                        <a class="btn btn-primary" href="#">Ver todos</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card text-bg-dark">
+                            <header class="card-header">
+                                Bugatti Chiron Sport
+                            </header>
+                            <img src="images/Bugatti_Chiron.jpg" alt="Bugatti Chiron Sport">
+                            <div class="card-body">
+                                <p class="card-text">O Bugatti Chiron Sport não é apenas um carro, é uma obra de arte em movimento. Equipado com um motor W16 8.0 quadriturbo, o veículo alcança uma potência de 1.500 cv e impressionantes 163,3 kgfm de torque.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card text-bg-dark">
+                            <header class="card-header">
+                                Ferrari LaFerrari
+                            </header>
+                            <img src="images/Ferrari_LaFerrari.jpg" alt="Ferrari LaFerrari">
+                            <div class="card-body">
+                                <p class="card-text">A Ferrari LaFerrari foi a sucessora da Enzo e combina o motor V12 6.3 aspirado de 789 cv com um motor elétrico de 160 cv, o que lhe permite maior rendimento e menor emissão de poluentes. No total, são 963 cavalos e 91,6 kgfm de torque, podendo chegar aos 100 km/h em 3 segundos.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card text-bg-dark">
+                            <header class="card-header">
+                                Koenigsegg Jesko
+                            </header>
+                            <img src="images/Koenigsegg_Jesko.jpg" alt="Koenigsegg Jesko">
+                            <div class="card-body">
+                                <p class="card-text">Além de ser uma obra-prima da engenharia, o motor do Koenigsegg Jesko, sucessor natural do Agera RS, é um exagero no que diz respeito à potência. Trata-se de um V8 5.0 biturbo, que funciona tanto com gasolina pura quanto com o combustível chamado E85, que mistura 85% de etanol anidro com 15% do combustível fóssil.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
